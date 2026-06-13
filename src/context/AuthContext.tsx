@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useCallback, type ReactNode } from 'react';
-import type { User, LoginCredentials, AuthState } from '../types/user';
+import type { LoginCredentials, AuthState } from '../types/user';
 import { authApi } from '../lib/mock-api/auth';
 
 interface AuthContextValue extends AuthState {

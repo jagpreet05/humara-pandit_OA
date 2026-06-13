@@ -1,8 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
 import {
-  Search, Plus, Users, Mail, Phone, Building2, Clock,
-  Mic, ChevronRight, MoreHorizontal, UserPlus,
+  Search, Plus, Users, Mail, Phone,
+  MoreHorizontal, UserPlus,
 } from 'lucide-react';
 import { clientsApi } from '../../lib/mock-api/clients';
 import type { Client } from '../../types/client';
@@ -11,7 +10,6 @@ import { CardSkeleton } from '../../components/shared/Skeletons';
 import { EmptyState, ErrorState } from '../../components/shared/StateComponents';
 
 export function ClientsPage() {
-  const navigate = useNavigate();
   const [clients, setClients] = useState<Client[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
